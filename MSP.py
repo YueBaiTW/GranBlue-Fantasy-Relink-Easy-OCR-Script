@@ -44,12 +44,12 @@ def MSP_Get():
     subprocess.run(["AutoHotkey.exe", "send_esc.ahk"])
     time.sleep(1)
     
-
+executeTime = 50
 # F->左鍵->F->左鍵->左鍵->Esc->左鍵->Esc->左鍵->Esc
-# 每隔 5 秒執行一次，您可以調整時間間隔來測試不同情境
 try:
-    while True:
+    while executeTime > 0:
         time.sleep(3)
         MSP_Get()
+        executeTime = executeTime - 1
 except KeyboardInterrupt:
     print("結束")
