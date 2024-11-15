@@ -18,12 +18,13 @@ def capture_and_show_text():
         subprocess.run(["AutoHotkey.exe", "pressmouse.ahk"])
     else:
         subprocess.run(["AutoHotkey.exe", "pressmouse.ahk"])
-    # print("辨識結果:", text)  # 顯示辨識出的文字
+    print("執行中...", text)  # 顯示辨識出的文字
 
 # 每隔 5 秒執行一次，您可以調整時間間隔來測試不同情境
 try:
     while True:
         capture_and_show_text()
         time.sleep(5)
+
 except KeyboardInterrupt:
     print("結束")
